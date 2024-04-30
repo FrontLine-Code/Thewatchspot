@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-epilogue;
+  }
+}
+
+@layer components {
+  .header {
+    @apply bg-black px-32 py-5 flex items-center justify-between;
+  }
+
+  .logo {
+    @apply flex gap-1 items-center hover:cursor-pointer;
+  }
+
+  .contact-button {
+    @apply text-white font-normal text-[12px] bg-darkgreen 
+      shadow-none transition ease-linear hover:shadow-3xl px-8 py-4 
+      rounded-lg block;
+  }
+
+  .navbar-link {
+    @apply text-white text-nowrap text-xs border border-black 
+    transition ease-linear hover:border-white px-2 py-2 rounded-md
+    hover:cursor-pointer;
+  }
+
+  .banner-text {
+    @apply text-white font-extralight leading-[20px] text-sm max-w-72
+    w-auto tracking-wide;
+  }
+
+  .swiper-container {
+    @apply w-[436px] h-[315px] relative overflow-hidden;
+  }
+
+  .swiper-wrapper {
+    @apply flex transition-transform duration-[0.3s] ease-[ease];
+  }
+
+  .swiper-slide {
+    @apply flex-[0_0_auto] w-[436px] h-[255px] flex items-center justify-center text-2xl bg-darkgreen text-[white];
+  }
+
+  .swiper-controls {
+    @apply absolute flex gap-3 bottom-[0];
+  }
+
+  .swiper-control {
+    @apply border border-white p-2 rounded-lg;
+  }
+}

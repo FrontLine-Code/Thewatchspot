@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/output.css" rel="stylesheet" />
+    <link href="./styles/input.css" rel="stylesheet" />
+    <title>Thewatchspot</title>
+  </head>
+  <body>
+    <header class="header">
+      <span class="logo">
+        <img src="../public/icons/logo.svg" alt="logo" class="w-9 h-9" />
+        <p class="text-white text-base font-normal">thewatchspot</p>
+      </span>
+
+      <nav>
+        <ul class="flex gap-10">
+          <li class="navbar-link">
+            <a href="#about-us">ABOUT US</a>
+          </li>
+          <li class="navbar-link">
+            <a href="/"> CATALOG</a>
+          </li>
+          <li class="navbar-link">
+            <a href="/">SALE</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button type="button" class="contact-button">+380 (68) 443-94-26</button>
+    </header>
+
+    <div class="bg-gradient-to-br from-black to-dark px-32">
+      <div class="flex justify-between items-center pt-16 pb-9">
+        <h1
+          class="text-white font-semibold text-6xl max-w-[801px] w-auto leading-[65px]"
+        >
+          Welcome to our collection of premium watches
+        </h1>
+        <p class="banner-text">
+          Our watches are not just timepieces, but also an expression of your
+          personality and lifestyle. From classic designs to modern ones, we
+          have a watch to suit every taste and occasion.
+        </p>
+      </div>
+
+      <div class="flex items-center justify-between pb-20">
+        <div id="swiper-container" class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../public/images/swiperwatch1.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../public/images/swiperwatch2.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../public/images/swiperwatch3.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../public/images/swiperwatch4.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../public/images/swiperwatch5.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-controls">
+            <button id="prev" class="swiper-control">
+              <img
+                src="../public/icons/arrow.svg"
+                alt="arrow"
+                class="rotate-180"
+              />
+            </button>
+            <button id="next" class="swiper-control">
+              <img src="../public/icons/arrow.svg" alt="arrow" />
+            </button>
+          </div>
+        </div>
+
+        <img
+          src="../public/images/coveredwatch.png"
+          alt="watch"
+          class="w-auto max-w-2xl"
+        />
+      </div>
+    </div>
+
+    <main class="px-[132px]">
+      <section id="about-us" class="mt-20 flex justify-between">
+        <p class="text-darkgreen font-semibold text-[40px]">About Us</p>
+
+        <div class="flex flex-col gap-y-10">
+          <div class="flex justify-between">
+            <p class="max-w-md w-auto font-light text-sm">
+              Welcome to our premium watch collection, where luxury and style
+              meet functionality and precision. Our selection of timepieces
+              embodies the very best in Swiss craftsmanship and engineering,
+              ensuring that you'll always have a reliable and stylish accessory
+              on your wrist.
+            </p>
+            <p class="max-w-96 w-auto font-light text-sm">
+              At our premium watch collection, we believe that a watch is more
+              than just a timekeeping device – it's a statement piece that
+              reflects your personality and style. So why settle for anything
+              less than the best? Browse our collection today and discover the
+              perfect watch for you.
+            </p>
+          </div>
+          <img src="../public/images/detailedwatch.png" alt="detailedwatch">
+        </div>
+      </section>
+    </main>
+
+    <footer>footer</footer>
+    <script src="../lib/index.js"></script>
+  </body>
+</html>
