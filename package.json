@@ -4,17 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ios": "react-native run-ios",
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test:e2e": "npm run test",
-    "test:e2e:build": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:compile": "npx babel app --extensions .ts --out-dir lib --source-maps",
-    "build:types": "tsc",
-    "build": "concurrently npm:build:*",
     "watch:compile": "npx babel app --extensions .ts --out-dir lib --source-maps --watch",
     "watch:types": "tsc --watch",
-    "watch": "concurrently npm:watch:*",
     "dev": "tailwindcss -i ./app/styles/input.css -o ./app/styles/output.css --watch"
   },
   "keywords": [],
