@@ -7,8 +7,11 @@
     <link href="./styles/input.css" rel="stylesheet" />
     <title>Thewatchspot</title>
   </head>
-  <body>
-    <header class="header">
+  <body class="bg-black" onload="ToBottomHeader()">
+    <header
+      class="header -translate-y-20 transition-transform delay-150 ease-linear"
+      id="header"
+    >
       <span class="logo">
         <img src="../public/icons/logo.svg" alt="logo" class="w-9 h-9" />
         <p class="text-white text-base font-normal">thewatchspot</p>
@@ -20,7 +23,7 @@
             <a href="#about-us">ABOUT US</a>
           </li>
           <li class="navbar-link">
-            <a href="/"> CATALOG</a>
+            <a href="#catalog"> CATALOG</a>
           </li>
           <li class="navbar-link">
             <a href="/">SALE</a>
@@ -31,11 +34,9 @@
       <button type="button" class="contact-button">+380 (68) 443-94-26</button>
     </header>
 
-    <div class="bg-gradient-to-br from-black to-dark px-32">
+    <div class="bg-gradient-to-b from-black to-dark px-32">
       <div class="flex justify-between items-center pt-16 pb-9">
-        <h1
-          class="text-white font-semibold text-6xl max-w-[801px] w-auto leading-[65px]"
-        >
+        <h1 class="banner-title" id="banner-title">
           Welcome to our collection of premium watches
         </h1>
         <p class="banner-text">
@@ -45,49 +46,83 @@
         </p>
       </div>
 
-      <div class="flex items-center justify-between pb-20">
-        <div id="swiper-container" class="swiper-container">
-          <div class="swiper-wrapper">
+      <div class="banner-wrapper" id="banner-items">
+        <div class="swiper-container">
+          <div class="flex transition-[1s] swiper-wrapper">
             <div class="swiper-slide">
-              <img src="../public/images/swiperwatch1.png" alt="" />
+              <img src="../public/images/swiperwatch1.png" alt="swiper-img" />
             </div>
             <div class="swiper-slide">
-              <img src="../public/images/swiperwatch2.png" alt="" />
+              <img src="../public/images/swiperwatch2.png" alt="swiper-img" />
             </div>
             <div class="swiper-slide">
-              <img src="../public/images/swiperwatch3.png" alt="" />
+              <img src="../public/images/swiperwatch3.png" alt="swiper-img" />
             </div>
             <div class="swiper-slide">
-              <img src="../public/images/swiperwatch4.png" alt="" />
+              <img src="../public/images/swiperwatch4.png" alt="swiper-img" />
             </div>
             <div class="swiper-slide">
-              <img src="../public/images/swiperwatch5.png" alt="" />
+              <img src="../public/images/swiperwatch5.png" alt="swiper-img" />
             </div>
           </div>
-          <div class="swiper-controls">
-            <button id="prev" class="swiper-control">
-              <img
-                src="../public/icons/arrow.svg"
-                alt="arrow"
-                class="rotate-180"
-              />
-            </button>
-            <button id="next" class="swiper-control">
-              <img src="../public/icons/arrow.svg" alt="arrow" />
-            </button>
+
+          <div class="flex justify-between items-center">
+            <div class="flex gap-3 p-1">
+              <button class="swiper-button-prev">
+                <img
+                  src="../public/icons/arrow.svg"
+                  class="rotate-180"
+                  alt="arrow"
+                />
+              </button>
+              <button class="swiper-button-next">
+                <img src="../public/icons/arrow.svg" alt="arrow" />
+              </button>
+            </div>
+
+            <div class="w-[100px] relative overflow-hidden">
+              <div class="flex transition-[1s] indicator-wrapper">
+                <div class="indicator-slide">
+                  <span class="line"></span>
+                  01
+                  <span class="line"></span>
+                </div>
+                <div class="indicator-slide">
+                  <span class="line"></span>
+                  02
+                  <span class="line"></span>
+                </div>
+                <div class="indicator-slide">
+                  <span class="line"></span>
+                  03
+                  <span class="line"></span>
+                </div>
+                <div class="indicator-slide">
+                  <span class="line"></span>
+                  04
+                  <span class="line"></span>
+                </div>
+                <div class="indicator-slide">
+                  <span class="line"></span>
+                  05
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <img
           src="../public/images/coveredwatch.png"
           alt="watch"
-          class="w-auto max-w-2xl"
+          id="bannerimg"
+          class="w-auto max-w-2xl transition ease-linear"
         />
       </div>
     </div>
 
-    <main class="px-[132px]">
-      <section id="about-us" class="mt-20 flex justify-between">
+    <main class="px-[132px] bg-white">
+      <section id="about-us" class="pt-20 flex justify-between">
         <p class="text-darkgreen font-semibold text-[40px]">About Us</p>
 
         <div class="flex flex-col gap-y-10">
@@ -107,8 +142,14 @@
               perfect watch for you.
             </p>
           </div>
-          <img src="../public/images/detailedwatch.png" alt="detailedwatch">
+          <img src="../public/images/detailedwatch.png" alt="detailedwatch" />
         </div>
+      </section>
+
+      <section id="catalog" class="bg-white pt-40">
+        <p class="text-darkgreen font-semibold text-[40px] mb-16">Catalog</p>
+        <div id="products" class="flex flex-wrap justify-between gap-y-6"></div>
+        
       </section>
     </main>
 

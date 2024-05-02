@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply box-border no-underline list-none m-0 p-0;
+  }
+
   body {
     @apply font-epilogue;
   }
@@ -26,9 +30,8 @@
   }
 
   .navbar-link {
-    @apply text-white text-nowrap text-xs border border-black 
-    transition ease-linear hover:border-white px-2 py-2 rounded-md
-    hover:cursor-pointer;
+    @apply text-white text-nowrap text-xs transition ease-linear px-2 py-2 
+    rounded-md hover:bg-white hover:text-black hover:cursor-pointer;
   }
 
   .banner-text {
@@ -36,23 +39,34 @@
     w-auto tracking-wide;
   }
 
-  .swiper-container {
-    @apply w-[436px] h-[315px] relative overflow-hidden;
+  .banner-wrapper {
+    @apply flex items-center justify-between pb-20 opacity-0 transition-opacity ease-linear delay-150;
   }
 
-  .swiper-wrapper {
-    @apply flex transition-transform duration-[0.3s] ease-[ease];
+  .banner-title {
+    @apply text-white font-semibold text-6xl max-w-[801px] w-auto leading-[65px] [transform:rotateX(90deg)]
+    transition-transform delay-150 ease-linear;
+  }
+
+  .swiper-container {
+    @apply w-[456px] relative overflow-hidden flex flex-col gap-5;
   }
 
   .swiper-slide {
-    @apply flex-[0_0_auto] w-[436px] h-[255px] flex items-center justify-center text-2xl bg-darkgreen text-[white];
+    @apply flex-[0_0_auto] w-full min-h-[300px] flex items-center justify-center text-2xl bg-[#1e2827];
   }
 
-  .swiper-controls {
-    @apply absolute flex gap-3 bottom-[0];
+  .indicator-slide {
+    @apply flex-[0_0_auto] w-full min-h-[30px] flex items-center justify-between text-sm text-[white];
   }
 
-  .swiper-control {
-    @apply border border-white p-2 rounded-lg;
+  .line {
+    @apply w-[35px] h-0.5 bg-[white];
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply w-10 h-10 border cursor-pointer flex items-center 
+    justify-center rounded-lg border-solid border-[white] hover:scale-[1.1];
   }
 }
