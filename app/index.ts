@@ -1,5 +1,3 @@
-import { toggle } from "./function";
-
 //banner img
 let bannerImg = <HTMLElement>document.getElementById("bannerimg");
 
@@ -104,7 +102,7 @@ let Header = <HTMLElement>document.getElementById("header");
 let BannerItems = <HTMLElement>document.getElementById("banner-items");
 let BannerTitle = <HTMLElement>document.getElementById("banner-title");
 
-function ToBottomHeader() {
+function Movement() {
   Header.style.transform = `translateY(0)`;
   BannerItems.style.opacity = `1`;
   BannerTitle.style.transform = `rotateX(0deg)`;
@@ -137,47 +135,64 @@ function renderImages(images: { src: string; title: string; price: string }[]) {
     productTextWrapper.classList.add("flex", "justify-between");
 
     const actionsWrapper = document.createElement("div");
-    actionsWrapper.classList.add("flex", "justify-between");
+    actionsWrapper.classList.add("flex", "gap-3");
 
     const cartBtn = document.createElement("button");
-    cartBtn.classList.add("px-4");
     const cartBtnIcon = document.createElement("img");
     cartBtnIcon.src = "../public/icons/stroke-cart.svg";
-    
+    cartBtn.classList.add(
+      "w-[45px]",
+      "flex",
+      "justify-center",
+      "items-center",
+      "rounded-md",
+      "bg-milk"
+    );
+
     const likeBtn = document.createElement("button");
-    likeBtn.classList.add("px-4");
     const likeBtnIcon = document.createElement("img");
     likeBtnIcon.src = "../public/icons/stroke-like.svg";
-    
+    likeBtn.classList.add(
+      "w-[45px]",
+      "flex",
+      "justify-center",
+      "items-center",
+      "rounded-md",
+      "bg-milk"
+    );
+
     const btnElement = document.createElement("button");
     btnElement.textContent = "BUY NOW";
-    
+
     divElement.classList.add(
       "border",
-      "border-white",
-      "hover:border-silver",
+      "border-silver",
+      "hover:border-black",
       "transition-[0.1s]",
       "border-white",
       "cursor-pointer",
-      "bg-milk",
       "rounded-lg",
       "p-4",
       "flex",
       "flex-col"
     );
+
     btnElement.classList.add(
       "bg-darkgreen",
+      "hover:bg-milk",
       "border",
       "border-darkgreen",
-      "hover:bg-milk",
-      "hover:text-darkgreen",
-      "transition-colors",
-      "text-white",
       "rounded-md",
-      "pt-5",
-      "pb-4",
-      "px-8"
+      "text-sm",
+      "text-white",
+      "hover:text-darkgreen",
+      "mr-auto",
+      "pt-3",
+      "pb-2",
+      "px-4",
+      "transition-colors"
     );
+
     divElement.appendChild(imageElement);
     divElement.appendChild(productTextWrapper);
     divElement.appendChild(actionsWrapper);
@@ -188,7 +203,7 @@ function renderImages(images: { src: string; title: string; price: string }[]) {
     actionsWrapper.appendChild(likeBtn);
     likeBtn.appendChild(likeBtnIcon);
     cartBtn.appendChild(cartBtnIcon);
-    
+
     container.appendChild(divElement);
   });
 }

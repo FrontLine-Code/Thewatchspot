@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./styles/output.css" rel="stylesheet" />
     <link href="./styles/input.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <title>Thewatchspot</title>
   </head>
-  <body class="bg-black" onload="ToBottomHeader()">
+  <body class="bg-black" onload="Movement()">
     <header
       class="header -translate-y-20 transition-transform delay-150 ease-linear"
       id="header"
@@ -34,7 +35,7 @@
       <button type="button" class="contact-button">+380 (68) 443-94-26</button>
     </header>
 
-    <div class="bg-gradient-to-b from-black to-dark px-32">
+    <div class="bg-gradient-to-b from-black to-darkgreen px-32">
       <div class="flex justify-between items-center pt-16 pb-9">
         <h1 class="banner-title" id="banner-title">
           Welcome to our collection of premium watches
@@ -121,8 +122,8 @@
       </div>
     </div>
 
-    <main class="px-[132px] bg-white">
-      <section id="about-us" class="pt-20 flex justify-between">
+    <main class="bg-milk">
+      <section id="about-us" class="px-[132px] pt-20 flex justify-between">
         <p class="text-darkgreen font-semibold text-[40px]">About Us</p>
 
         <div class="flex flex-col gap-y-10">
@@ -146,10 +147,20 @@
         </div>
       </section>
 
-      <section id="catalog" class="bg-white pt-40">
+      <section id="catalog" class="pt-40 pb-20 px-[132px]">
         <p class="text-darkgreen font-semibold text-[40px] mb-16">Catalog</p>
         <div id="products" class="flex flex-wrap justify-between gap-y-6"></div>
-        
+      </section>
+
+      <section class="bg-white px-[132px] pt-28 pb-20">
+        <p class="text-xs text-dark font-light">New watches</p>
+        <p class="text-[40px] text-darkgreen font-semibold w-2/5">
+          Green And Bronze—The Match Made In Heaven
+        </p>
+        <div class="flex justify-between mt-20">
+          <img src="../public/images/plantwatch.png" alt="" />
+          <img src="../public/images/darkwatch.png" alt="" />
+        </div>
       </section>
     </main>
 
